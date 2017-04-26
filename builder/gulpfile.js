@@ -1,5 +1,5 @@
 // Variables
-const gulp                = require( 'gulp' );
+const gulp = require( 'gulp' );
 const config =
 {
     scss:   "../assets/scss/",
@@ -13,6 +13,7 @@ gulp_rename         = require( 'gulp-rename' ),
 gulp_plumber        = require( 'gulp-plumber' ),
 gulp_notify         = require( 'gulp-notify' ),
 gulp_sourcemaps     = require( 'gulp-sourcemaps' ),
+browserSync         = require( 'browser-sync' ).create();
 
 // Image depedency
 gulp_imagemin       = require( 'gulp-imagemin' );
@@ -26,9 +27,33 @@ gulp_cssnano        = require( 'gulp-cssnano' ),
 gulp_concat         = require( 'gulp-concat' );
 gulp_uglify         = require( 'gulp-uglify' );
 
+// BrowserSync
+
+    // Static Server + Watching HTML, SCSS, JS files
+    gulp.task( 'serve', ['style'], function()
+    {
+
+        browserSync.init(
+            {
+                server: "../dist/"
+            }
+        );
+
+        gulp.watch( config.dist+"**/*.html").on('change', browserSync.reload );
+        gulp.watch( config.scss+"*.scss", ['style'] );
+        gulp.watch( config.js+"*.js", ['js-watch'] );
+    } );
+
+    // Ensure that 'javascript' task is alreaduy complete before reload
+    gulp.task( 'js-watch', ['javascript'], function (done)
+    {
+        browserSync.reload();
+        done();
+    } );
+
 
 // Default task
-gulp.task( 'default', ['watch'], function(){} );
+gulp.task( 'default', ['serve', 'watch'], function(){} );
 
 // Compile SCSS into CSS, create a sourcemaps, autoprefix the code and put the file into dist folder
 gulp.task( 'style', function()
@@ -47,10 +72,15 @@ gulp.task( 'style', function()
             }
         ) )
         .pipe( gulp_cssnano() )
-        .pipe( gulp_sourcemaps.write() )
+        .pipe( gulp_sourcemaps.write('./',
+            {
+                includeContent: false,
+                sourceRoot: config.scss
+            }
+        ) )
         .pipe( gulp_rename('style.min.css') )
         .pipe( gulp.dest(config.dist + 'css') )
-        .pipe( gulp_notify("style is cool !") )
+        .pipe( browserSync.stream() );
 } );
 
 
@@ -66,8 +96,9 @@ gulp.task( 'javascript', function()
         .pipe( gulp_sourcemaps.write() )
         .pipe( gulp_rename('script.min.js') )
         .pipe( gulp.dest(config.dist + 'js') )
-        .pipe( gulp_notify("js is cool !") )
 } );
+
+
 
 // Minifies images
 gulp.task( 'images', function()

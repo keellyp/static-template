@@ -27,6 +27,7 @@
     "gulp-sourcemaps": "^2.6.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "gulp-concat": "^2.6.1",
     "gulp-notify": "^3.0.0",
     "gulp-uglify": "^2.1.2"
