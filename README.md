@@ -41,6 +41,8 @@ npm install
 * "images" minifies all the images and place it on dist folder.
 * "fonts" moves all the fonts into dist folder
 * "watch" watches the changes in your files
+* "serve" create a localhost and watch the changes in the HTML and SCSS files
+* "js-watch" ensure that "javascript" task is already finish before loading browser
 
 
 ## Author
