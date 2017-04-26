@@ -28,8 +28,8 @@ npm install
 * HTML5 / CSS3
 
 
-
 ## Features
+* BrowserSync
 * Sourcemaps
 * Watchers
 * Notifications

@@ -27,18 +27,15 @@ gulp_cssnano        = require( 'gulp-cssnano' ),
 gulp_concat         = require( 'gulp-concat' );
 gulp_uglify         = require( 'gulp-uglify' );
 
-// BrowserSync
-
+// BrowserSync http://localhost:3001/
     // Static Server + Watching HTML, SCSS, JS files
     gulp.task( 'serve', ['style'], function()
     {
-
         browserSync.init(
             {
                 server: "../dist/"
             }
         );
-
         gulp.watch( config.dist+"**/*.html").on('change', browserSync.reload );
         gulp.watch( config.scss+"*.scss", ['style'] );
         gulp.watch( config.js+"*.js", ['js-watch'] );
