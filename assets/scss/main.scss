@@ -1,0 +1,19 @@
+@import "components/_reset.scss";
+@import "components/_variables.scss";
+
+
+body
+{
+    background-color: $main-color;
+    font-size: 16px;
+    color: black;
+    font-family: PlayfairDisplay;
+}
+
+h1
+{
+    font-weight: 800;
+    font-size: 24px;
+    padding: 20px;
+    color: $second-color;
+}
