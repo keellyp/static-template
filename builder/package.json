@@ -1,35 +1,25 @@
 {
-  "name": "php-template",
+  "name": "static-template",
   "version": "1.0.0",
-  "description": "A dynamic template for PHP, HTML, CSS, JS with GULP",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/keellyp/PHP-template.git"
-  },
-  "author": "Kelly Phan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/keellyp/PHP-template/issues"
-  },
-  "homepage": "https://github.com/keellyp/PHP-template#readme",
+  "description": "A static template for HTML, CSS, JS, run with Gulp. ",
+  "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.18.8",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.2.0",
+    "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.18.8",
-    "gulp-concat": "^2.6.1",
-    "gulp-notify": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kelly Phan",
+  "license": "ISC"
 }
