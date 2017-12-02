@@ -1,52 +1,51 @@
 # static-template
+[![Node](https://img.shields.io/badge/Node-%3E%3D8.9.1-brightgreen.svg?style=flat-square)]()
+[![Gulp](https://img.shields.io/badge/Gulp%20-%3E%3D3.9.1-blue.svg?style=flat-square)]()
+[![Yarn](https://img.shields.io/badge/yarn-%3E%3D1.3.2-ff69b4.svg?style=flat-square)]()
+
+
+<!-- ![](screenshot.png "") -->
+
 A static template for HTML5, CSS3, JS run with Gulp
 
-
-## Prerequisites
-You need to install [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/lang/en/#)
+<!-- [See the demo](https://oculus-rift.netlify.com/) -->
 
 
-### Install
-Download the repository then go to the folder builder in your terminal.
+## How to 🎉
 
-```
-cd .../static-template/builder
-```
-
-Once you are in there, you have to install node-modules
+### Installation 📦 
+First, do not forget to install [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/en/docs/install). 
+After downloaded the repository, install the node_modules with : 
 
 ```
 yarn install
 ```
-*You may need to install with sudo if you are a macOS user*
 
+### Running the app 🚀
+To run the app, run this command in your terminal :
+```
+yarn run dev
+```
+Then browser-sync should start and you should be able to see the app.
 
-## Compatibily
-* Gulp 3.9
-* Javascript ES6
-* HTML5 / CSS3
+### Build it 👷
+To build it, run this command in your terminal :
+```
+yarn run build
+```  
 
-## Features
+## Features 
 * BrowserSync
 * Sourcemaps
 * Watchers
 * Notifications
 * File include
 
-### Tasks
-* "style" allows to compile the SASS into CSS, autoprefix it, minified and replace into the dist folder.
-* "javascript" concatenates all the javascript files into one, minified it and replace into the dist folder
-* "images" minifies all the images and place it on dist folder.
-* "fonts" moves all the fonts into dist folder
-* "fileinclude" allows to have @@include into HTML files.
-* "watch" watches the changes in your files
-* "serve" create a localhost and watch the changes in the HTML and SCSS files
-* "js-watch" ensure that "javascript" task is already finish before loading browser
+## Other 🔎 
+### Author 👥
 
-
-## Author
 [Kelly Phan](http://kellyphan.fr)
 
-
-## Licence
+### Licence 📄
 This repository is under MIT Licence.
+
