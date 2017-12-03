@@ -8,7 +8,7 @@ const gulp    = require('gulp'),
   env         = require('babel-preset-env')
 
 // Get all gulp dependencies 
-const plugin  = require('gulp-load-plugins')();
+const plugin = require('gulp-load-plugins')();
 
 // Variables
 const config = {
@@ -46,6 +46,7 @@ gulp.task('style', () => {
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(plugin.csscomb())
     .pipe(config.isProd ? plugin.cssnano() : plugin.util.noop())
     .pipe(!config.isProd ? plugin.sourcemaps.write() : plugin.util.noop())
     .pipe(plugin.rename('style.min.css'))
