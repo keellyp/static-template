@@ -33,10 +33,11 @@ This is a to-do-list for front-end project inspired by [David Dias](https://gith
 
 ##### Compressions
 
-- [ ] JS compressed
+- [ ] JS compressed, loaded asynchronously
 - [ ] CSS compressed
 - [ ] HTML compressed
-- [ ] Images compressed (Guetzli, TinyPNG, Imageoptim)
+- [ ] Images compressed, resized
+- [ ] Used sprite if needed
 
 ### SEO / Social / Analysis
 
