@@ -3,18 +3,15 @@
 
 
 body {
-    font-family: PlayfairDisplay;
-    font-size: 16px;
-
-    color: black;
-    background-color: $main-color;
+  background-color: $main-color;
+  color: black;
+  font-family: PlayfairDisplay;
+  font-size: 16px;
 }
 
 h1 {
-    font-size: 24px;
-    font-weight: 800;
-
-    padding: 20px;
-
-    color: $second-color;
+  padding: 20px;
+  color: $second-color;
+  font-size: 24px;
+  font-weight: 800;
 }

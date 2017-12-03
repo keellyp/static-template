@@ -1,11 +1,9 @@
-$main-color : #efefef;
-$second-color : #ff2171;
+$main-color: #efefef;
+$second-color: #ff2171;
 
-@font-face
-{
-    font-family: 'PlayfairDisplay';
-    font-weight: 40fzer0;
+@font-face {
+  font-family: 'PlayfairDisplay';
+  font-weight: 400;
 
-    src: url(../fonts/PlayfairDisplay-Regular.ttf);
-
+  src: url(../fonts/PlayfairDisplay-Regular.ttf);
 }
