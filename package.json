@@ -16,12 +16,8 @@
     "babelify": "^8.0.0",
     "browser-sync": "^2.18.13",
     "browserify": "^14.5.0",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^2.3.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-file-include": "^1.2.0",
     "gulp-imagemin": "^4.0.0",
@@ -29,9 +25,10 @@
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-responsive": "^2.8.0",
+    "gulp-rm": "^1.0.4",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "gulp-srcset": "^1.2.0",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
@@ -39,6 +36,6 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "graceful-fs": "^4.0.0"
+    "gulp-cli": "gulpjs/gulp-cli"
   }
 }
