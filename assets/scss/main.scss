@@ -1,19 +1,20 @@
-@import "components/_reset.scss";
-@import "components/_variables.scss";
+@import 'components/_reset.scss';
+@import 'components/_variables.scss';
 
 
-body
-{
-    background-color: $main-color;
-    font-size: 16px;
-    color: black;
+body {
     font-family: PlayfairDisplay;
+    font-size: 16px;
+
+    color: black;
+    background-color: $main-color;
 }
 
-h1
-{
-    font-weight: 800;
+h1 {
     font-size: 24px;
+    font-weight: 800;
+
     padding: 20px;
+
     color: $second-color;
 }
