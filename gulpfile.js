@@ -97,7 +97,7 @@ gulp.task('srcset', () => {
 gulp.task('images', () => {
   gulp
     .src(`${config.assets}images/*.{png, jpg, svg, gif}`)
-    .pipe(!config.isProd ? plugin.imagemin([
+    .pipe(config.isProd ? plugin.imagemin([
       plugin.imagemin.gifsicle({interlaced: true}),
       plugin.imagemin.jpegtran({progressive: true}),
       plugin.imagemin.optipng({optimizationLevel: 5}),
