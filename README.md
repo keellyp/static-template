@@ -35,11 +35,13 @@ yarn run build
 ```  
 
 ## Features 
-* BrowserSync
-* Sourcemaps
-* Watchers
-* Notifications
-* File include
+* BrowserSync : time-saving synchronised browser testing.
+* Clean : Delete the dist repo before each build
+* Style task : use sass, notify errors, autoprefixer, csscomb and sourcemaps
+* Javascript : use browserify, handle errors, minify
+* Srcset : create responsive images sizes. This task isn't include in watcher, must be launch by ourselves
+* Images : images optimisation for .png, .jpg, .svg & .gif 
+* File include : plugin that allows to include HTML file to separate code. 
 
 ## Other 🔎 
 ### Author 👥
