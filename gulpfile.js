@@ -150,4 +150,4 @@ gulp.task('watch', ['fileinclude', 'style', 'javascript', 'fonts', 'images'], ()
 gulp.task('default', ['browserSync', 'watch'], () => {})
 
 // Build task
-gulp.task('build', ['clean', 'fileinclude', 'style', 'javascript', 'fonts', 'images'], () => {})
+gulp.task('build', ['fileinclude', 'style', 'javascript', 'fonts', 'images'], () => {})
